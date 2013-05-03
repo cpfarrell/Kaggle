@@ -1,0 +1,13 @@
+function lines = Lines(X, y)
+
+lines = 0;
+
+for ipicture = 4:10
+%for ipicture = 1:rows(X)
+    picture = reshape(X(ipicture,:), 28, []);
+    for irow = 1:rows(picture)
+
+    end
+    y(ipicture)
+    picture
+end
