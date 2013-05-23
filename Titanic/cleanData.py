@@ -1,0 +1,27 @@
+import sys
+import itertools
+import json
+import csv
+#import nltk
+#import re
+import operator
+from collections import defaultdict
+
+def main():
+    cr = csv.reader(open("train.csv","rb"))
+
+    cw = csv.writer(open("trainclean.csv", "wb"))
+
+    for row in cr:    
+        #row = row.split()
+        survived = row[0]
+        pclass = row[1]
+        sex = -1
+        if(row[3]=="female"): sex = 1
+        age = row[4]
+        sibsp = row[5]
+        parch = row[6]
+        cw.writerow([survived, pclass, sex, age, sibsp, parch])
+
+if __name__ == '__main__':
+    main()

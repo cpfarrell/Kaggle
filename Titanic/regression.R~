@@ -1,0 +1,4 @@
+%Logistic regression of titanic example on Kaggle
+
+%% Initialization
+clear ; close all; clc

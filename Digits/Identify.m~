@@ -14,6 +14,8 @@ pixels = data(:, 2:785); y = data(:, 1);
 %columns(pixels)
 %rows(pixels)
 
+l = Lines(pixels, y);
+
 m = rows(pixels);
 
 totalPixels = sum(pixels')';
@@ -61,4 +63,4 @@ theta = gradientDescent(X, rowones, theta, alpha, iterations);
 fprintf('Theta found by gradient descent: ');
 fprintf('%f %f \n', theta(1), theta(2));
 
-plotData(y, prediction(X, theta));
+%plotData(y, prediction(X, theta));

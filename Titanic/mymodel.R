@@ -27,6 +27,8 @@ dtree1 = function() {
     plot( subset( readData, survived==1, select = c(fare, age ) ), col='red' )
     points( subset( readData, survived==0, select = c(fare, age ) ), col='blue' )
 
+
+
     baseData = data.frame(cbind(readData$survived,
         cutFare,
         readData$pclass,
